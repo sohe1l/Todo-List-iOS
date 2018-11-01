@@ -1,18 +1,19 @@
-//
-//  Todo.swift
-//  TodoApp
-//
-//  Created by Soheil on 10/24/18.
-//  Copyright © 2018 sohe1l. All rights reserved.
-//
-
 import Foundation
 
-
-class Todo{
+class Todo: Codable{
     
+    var title: String
+    var completed = false
+    var id: Int
     
+    init(title: String, id: Int){
+        self.title = title
+        self.id = id
+    }
     
-    
-    
+    init(_ title: String, isCompleted: Bool, id: Int){
+        self.title = title
+        self.completed = isCompleted
+        self.id = id
+    }
 }
