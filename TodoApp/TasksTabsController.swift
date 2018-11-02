@@ -7,7 +7,7 @@ class TasksTabsConstoller: UITabBarController{
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        var dest = segue.destination as? TaskController;
+        let dest = segue.destination as? TaskController;
         dest?.isNewTask = true;
     }
 

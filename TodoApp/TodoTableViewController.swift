@@ -12,7 +12,7 @@ class TodoTableViewController: UITableViewController{
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "todoCell") as! TodoCell
         cell.textLabel?.text = getTasks()[indexPath.row].title
-        print( getTasks()[indexPath.row].title , " " , getTasks()[indexPath.row].completed)
+        //print( getTasks()[indexPath.row].title , " " , getTasks()[indexPath.row].completed)
         return cell
     }
     

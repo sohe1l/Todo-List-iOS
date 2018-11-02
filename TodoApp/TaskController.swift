@@ -45,9 +45,7 @@ class TaskController : UIViewController{
                 navigationController?.popToRootViewController(animated: true)
                 return
             }
-            print(todo)
             taskTF.text = todo.title
-            print(todo.completed)
             completedSwitch.isOn = todo.completed
         }
     }
@@ -55,7 +53,7 @@ class TaskController : UIViewController{
     @IBAction func savePressed(_ sender: Any) {
         if(taskTitle != ""){
             if(isNewTask){
-                let newTask = Todo(taskTitle, isCompleted: isCompleted, id: TodoList.shared.getNextId())
+                let newTask = Todo(taskTitle, isCompleted: false, id: TodoList.shared.getNextId())
                 TodoList.shared.saveNewTask(newTask: newTask)
             }else{
                 let updateTask = Todo(taskTitle, isCompleted: isCompleted, id: editId)
